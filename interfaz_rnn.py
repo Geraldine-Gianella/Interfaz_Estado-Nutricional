@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # Título e imagen principal
-st.title("🤰 Clasificación Nutricional de Gestantes del departaemnto de Huancavelica")
+st.title(" Predicción de Estado Nutricional de Gestantes del departamento de Huancavelica")
 st.markdown("Aplicación desarrollada con modelo MLPClassifier para diagnosticar el estado nutricional de gestantes.")
 
 # Imagen ilustrativa (opcional)
@@ -51,7 +51,7 @@ except:
 
 
 # Sidebar informativo
-st.sidebar.header("⚙️ Opciones de visualización")
+st.sidebar.header("Opciones de visualización")
 show_sample = st.sidebar.checkbox("📋 Mostrar muestra del dataset")
 show_metrics = st.sidebar.checkbox("📊 Mostrar métricas del modelo")
 show_conf_matrix = st.sidebar.checkbox("📉 Mostrar matriz de confusión")
@@ -97,7 +97,7 @@ provincia_options = ['HUANCAVELICA', 'ACOBAMBA', 'ACORIA', 'CASTROVIRREYNA',
 
 
 # Formulario de entrada
-st.header("📝 Ingrese los datos de la gestante")
+st.header("Ingrese los datos de la gestante")
 
 Provincia = st.selectbox("Provincia", provincia_options)
 Edad = st.number_input("Edad (años)", min_value=10, max_value=50, value=25)
@@ -138,7 +138,7 @@ if st.session_state.get("last_input_hash") != input_hash:
     st.session_state.pop("probabilities", None)
     st.session_state["last_input_hash"] = input_hash
 
-if st.button("📊 Predecir diagnóstico nutricional"):
+if st.button("Predecir diagnóstico nutricional"):
     st.session_state["prediction"] = model.predict(input_data)[0]
     st.session_state["probabilities"] = model.predict_proba(input_data)[0]
 
