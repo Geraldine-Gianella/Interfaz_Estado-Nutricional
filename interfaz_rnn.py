@@ -19,8 +19,8 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # Título e imagen principal
-st.title(" Predicción de Estado Nutricional de Gestantes del departamento de Huancavelica")
-st.markdown("Aplicación desarrollada con modelo MLPClassifier para diagnosticar el estado nutricional de gestantes.")
+st.title("Diagnóstico del Estado Nutricional de Gestantes en el departamento de Huancavelica")
+st.markdown("Aplicación desarrollada aplicando Redes Neuronales para diagnosticar el estado nutricional de gestantes.")
 
 # Imagen ilustrativa (opcional)
 try:
